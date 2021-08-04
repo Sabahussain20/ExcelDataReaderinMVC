@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+}
+
+<h2>Heart Failure Clinical Records</h2>
+<table cellpadding="4" cellspacing="4" border="1">
+    <tr>
+        <th>age</th>
+        <th>anaemia</th>
+        <th>creatinine_phosphokinase</th>
+        <th>diabetes</th>
+        <th>ejection_fraction</th>
+        <th>high_blood_pressure</th>
+        <th>platelets</th>
+        <th>serum_creatinine</th>
+        <th>smoking</th>
+        <th>time</th>
+        <th>DEATH_EVENT</th>
+        @foreach (var ex in ViewBag.ExcelFile)
+        {
+<tr>
+        <td>@ex.age</td>
+        <td>@ex.anaemia</td>
+        <td>@ex.creatinine_phosphokinase</td>
+        <td>@ex.diabetes</td>
+        <td>@ex.ejection_fraction</td>
+        <td>@ex.high_blood_pressure</td>
+        <td>@ex.platelets</td>
+        <td>@ex.serum_creatinine</td>
+        <td>@ex.smoking</td>
+        <td>@ex.time</td>
+        <td>@ex.DEATH_EVENT</td>
+    </tr>
+        }
+
+    </tr>
+    </table>
+

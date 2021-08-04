@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Excel Data Reader</h2>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post ,new {enctype ="multipart/form-data" }))
+{
+    @Html.Raw(ViewBag.Error)
+    <span>Excel File</span><input type="file" name="ExcelFile"/>
+    <br>
+    <input type="submit" value="Import"/>
+            }
